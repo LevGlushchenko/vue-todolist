@@ -1,16 +1,27 @@
 <template>
   <div id="app">
-    <h1>Todolist</h1>
+    <h1>Vue.js Todo List</h1>
   </div>
 </template>
 
-<style>
+<script>
+export default {};
+</script>
+
+<style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+:root {
+  --font: Roboto, sans-serif;
+  --textColor: #374961;
+  --linkActiveColor: #41b783;
+}
+
 #app {
+  font-family: var(--font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-left: 5%;
-  margin-right: 5%;
+  color: var(--textColor);
 }
 </style>
