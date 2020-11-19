@@ -1,11 +1,18 @@
 <template>
   <div id="app">
     <h1>Vue.js Todo List</h1>
+    <Form />
   </div>
 </template>
 
 <script>
-export default {};
+import Form from "./components/Form";
+export default {
+  name: "App",
+  components: {
+    Form
+  }
+};
 </script>
 
 <style lang="scss">
