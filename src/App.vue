@@ -1,18 +1,20 @@
 <template>
   <div id="app">
     <h1>Vue.js Todo List</h1>
+
     <Form />
   </div>
 </template>
 
-<script>
-import Form from "./components/Form";
-export default {
-  name: "App",
-  components: {
-    Form
-  }
-};
+<script lang="ts">
+import Vue from "vue";
+import Component from "vue-class-component";
+import Form from "./components/Form.vue";
+
+@Component({
+  components: { Form }
+})
+export default class App extends Vue {}
 </script>
 
 <style lang="scss">

@@ -4,13 +4,18 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
-  entry: "./src/main.js",
+  entry: "./src/main.ts",
   module: {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         use: "babel-loader"
+      },
+      {
+        test: /\.ts$/,
+        exclude: /node_modules/,
+        use: "ts-loader"
       },
       {
         test: /\.vue$/,
@@ -35,7 +40,7 @@ module.exports = {
     alias: {
       vue$: "vue/dist/vue.runtime.esm.js"
     },
-    extensions: ["*", ".js", ".vue", ".json"]
+    extensions: ["*", ".ts", ".js", ".vue", ".json"]
   },
   output: {
     filename: "bundle.js",
