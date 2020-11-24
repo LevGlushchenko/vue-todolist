@@ -5,6 +5,10 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/main.ts",
+  output: {
+    filename: "bundle.js",
+    path: resolve(__dirname, "dist")
+  },
   module: {
     rules: [
       {
@@ -14,7 +18,6 @@ module.exports = {
       },
       {
         test: /\.ts$/,
-        exclude: /node_modules/,
         use: "ts-loader"
       },
       {
@@ -30,7 +33,7 @@ module.exports = {
   plugins: [
     new VueLoaderPlugin(),
     new htmlWebpackPlugin({
-      template: resolve(__dirname, "public", "index.html"),
+      template: "./public/index.html",
       favicon: "./public/favicon.ico",
       title: "Vue.js Todo List"
     }),
@@ -41,9 +44,5 @@ module.exports = {
       vue$: "vue/dist/vue.runtime.esm.js"
     },
     extensions: ["*", ".ts", ".js", ".vue", ".json"]
-  },
-  output: {
-    filename: "bundle.js",
-    path: resolve(__dirname, "dist")
   }
 };

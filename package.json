@@ -4,7 +4,7 @@
   "description": "Todo list build on Vue.js",
   "private": "true",
   "scripts": {
-    "start": "webpack serve --config webpack.dev.js",
+    "serve": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "repository": {
