@@ -6,6 +6,8 @@
           <v-row justify="center">
             <v-col cols="6">
               <h1 class="text-h2 text-center mb-5">Todo List</h1>
+
+              <Form @submit-form="onSubmitForm" />
             </v-col>
           </v-row>
         </v-container>
@@ -16,9 +18,18 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
+import Form from '@/components/Form.vue';
 
-@Component
-export default class App extends Vue {}
+@Component({
+  components: { Form },
+})
+export default class App extends Vue {
+  private todos: Array<string> = [];
+
+  private onSubmitForm(data: string) {
+    this.todos.push(data);
+  }
+}
 </script>
 
 <style lang="scss"></style>
