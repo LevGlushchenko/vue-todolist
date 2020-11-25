@@ -13,9 +13,6 @@ export const store = new Vuex.Store({
     todos: (state) => {
       return state.todos.sort((a, b) => {
         // @ts-ignore
-        // return a.date < b.date ? -1 : a.date > b.date ? 1 : 0;
-
-        // @ts-ignore
         return new Date(b.date) - new Date(a.date);
       });
     },
@@ -41,10 +38,6 @@ export const store = new Vuex.Store({
       // @ts-ignore
       todo.complete ? (todo.complete = false) : (todo.complete = true);
     },
-    // EDIT_TODO(state, id) {
-    //   // @ts-ignore
-    //   const todoIndex = state.todos.findIndex((todo) => todo.id === id);
-    // },
     DELETE_TODO(state, id) {
       // @ts-ignore
       const todoIndex = state.todos.findIndex((todo) => todo.id === id);
