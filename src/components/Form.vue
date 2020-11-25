@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import { Todo } from '@/types';
+import { Todo } from '../types';
 
 @Component
 export default class Form extends Vue {
