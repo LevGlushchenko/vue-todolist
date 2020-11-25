@@ -7,17 +7,14 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
-import Form from "./components/Form.vue";
+import { Vue, Component } from 'vue-property-decorator';
 
-@Component({
-  components: { Form }
-})
+@Component
 export default class App extends Vue {}
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 :root {
   --font: Roboto, sans-serif;
