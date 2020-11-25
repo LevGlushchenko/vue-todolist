@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const { VueLoaderPlugin } = require('vue-loader');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const { ProgressPlugin } = require('webpack');
 
 module.exports = {
   target: 'web',
@@ -53,6 +54,7 @@ module.exports = {
     ],
   },
   plugins: [
+    new ProgressPlugin(),
     new VueLoaderPlugin(),
     new htmlWebpackPlugin({
       template: './public/index.html',
