@@ -6,6 +6,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
+import { Todo } from '@/types';
 
 @Component
 export default class Form extends Vue {
@@ -13,7 +14,7 @@ export default class Form extends Vue {
     form: HTMLFormElement;
   };
 
-  private todo: string = '';
+  private todo: Todo = {};
   private todoRules: Array<any> = [
     (v: any) => !!v || 'Required field',
     (v: any) => v.length <= 50 || 'Must be less than 50 characters',
@@ -21,7 +22,7 @@ export default class Form extends Vue {
 
   private submitHandler() {
     this.$emit('submit-form', this.todo);
-    this.todo = '';
+    this.todo = {};
     this.$refs.form.reset();
   }
 }
