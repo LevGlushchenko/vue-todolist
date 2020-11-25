@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types", "./node_modules/vuetify/types"]
+  },
+  "types": ["vuetify"],
+  "paths": {
+    "@/*": ["src/*"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx", "src/store/index.ts"],
+  "files": ["src/shims-vue.d.ts"],
+  "exclude": ["node_modules"]
+}
