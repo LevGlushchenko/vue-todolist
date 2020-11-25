@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/",
     "sourceMap": true,
-    "target": "es5",
     "strict": true,
+    "noImplicitReturns": true,
     "module": "es2015",
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "target": "es5",
+    "experimentalDecorators": true
+  },
+  "include": ["./src/**/*"]
 }

@@ -6,8 +6,8 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   entry: "./src/main.ts",
   output: {
-    filename: "bundle.js",
-    path: resolve(__dirname, "dist")
+    path: resolve(__dirname, "dist"),
+    filename: "bundle.js"
   },
   module: {
     rules: [
@@ -17,8 +17,14 @@ module.exports = {
         use: "babel-loader"
       },
       {
-        test: /\.ts$/,
-        use: "ts-loader"
+        test: /\.tsx?$/,
+        exclude: [/node_modules/],
+        use: {
+          loader: "ts-loader",
+          options: {
+            appendTsSuffixTo: [/\.vue$/]
+          }
+        }
       },
       {
         test: /\.vue$/,
@@ -43,6 +49,6 @@ module.exports = {
     alias: {
       vue$: "vue/dist/vue.runtime.esm.js"
     },
-    extensions: ["*", ".ts", ".js", ".vue", ".json"]
+    extensions: [".ts", ".js", ".vue", ".json"]
   }
 };
