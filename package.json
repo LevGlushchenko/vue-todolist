@@ -6,10 +6,9 @@
   "scripts": {
     "serve": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint --ext .ts,.vue .",
-    "lint:fix": "eslint --fix --ext .ts,.vue .",
-    "test": "jest",
-    "analyze": "webpack --profile --json | Out-file 'stats.json' -Encoding OEM"
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.vue .",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
