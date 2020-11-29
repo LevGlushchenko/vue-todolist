@@ -1,6 +1,13 @@
 <template>
-  <v-form ref="form" @submit.prevent="addTodo">
-    <v-text-field v-model="value" :rules="todoRules" label="Add todo" required @blur="onBlur"></v-text-field>
+  <v-form ref="form" @submit.prevent="addTodo" data-test="todo-form">
+    <v-text-field
+      v-model="value"
+      :rules="todoRules"
+      label="Add todo"
+      required
+      @blur="onBlur"
+      data-test="todo-form-input"
+    ></v-text-field>
   </v-form>
 </template>
 

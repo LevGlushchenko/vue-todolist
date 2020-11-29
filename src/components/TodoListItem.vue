@@ -1,5 +1,5 @@
 <template>
-  <v-list-item two-line>
+  <v-list-item two-line data-test="todo-item">
     <v-list-item-action>
       <v-checkbox v-model="todo.isComplete"></v-checkbox>
     </v-list-item-action>

@@ -2,14 +2,14 @@ module.exports = {
   moduleFileExtensions: ['js', 'json', 'ts', 'vue'],
   transform: {
     '^.+\\.ts$': 'ts-jest',
-    '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest',
   },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(js?|ts?)$',
+  setupFiles: ['./src/tests/setup.ts'],
+  testRegex: '(/tests/^/(?!setup).*|(\\.|/)(test|spec))\\.(ts?)$',
   testURL: 'http://localhost/',
-  collectCoverage: true,
-  collectCoverageFrom: ['**/src/*.{ts,js,vue}', '!**/node_modules/**'],
+  // collectCoverage: true,
+  // collectCoverageFrom: ['**/src/*.{ts,vue}', '**/src/components/*.{ts,vue}', '!**/node_modules/**'],
 };
