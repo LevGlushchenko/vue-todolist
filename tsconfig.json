@@ -11,13 +11,15 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "typeRoots": ["./node_modules/@types", "./node_modules/vuetify/types"]
+    "typeRoots": ["./node_modules/@types", "./node_modules/vuetify/types"],
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "types": ["vuetify"],
-  "paths": {
-    "@/*": ["src/*"]
-  },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "tests/**/*.ts", "tests/**/*.tsx", "src/store/index.ts"],
+
+  "include": ["src/**/*.ts", "src/**/*.vue", "tests/**/*.ts", "src/store/index.ts"],
   "files": ["src/shims-vue.d.ts"],
   "exclude": ["node_modules"]
 }

@@ -8,7 +8,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+  testRegex: '(/tests/.*|(\\.|/)(test|spec))\\.(js?|ts?)$',
   testURL: 'http://localhost/',
   collectCoverage: true,
   collectCoverageFrom: ['**/src/*.{ts,js,vue}', '!**/node_modules/**'],

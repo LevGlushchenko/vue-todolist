@@ -24,7 +24,7 @@ export const store = new Vuex.Store({
         // @ts-ignore
         date: new Date().toISOString(),
         title: title,
-        complete: false,
+        isComplete: false,
       };
 
       // @ts-ignore

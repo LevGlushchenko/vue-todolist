@@ -23,6 +23,7 @@
   "homepage": "https://github.com/LevGlushchenko/vue-todolist#readme",
   "dependencies": {
     "core-js": "^3.7.0",
+    "date-fns": "^2.16.1",
     "uuid": "^8.3.1",
     "vue": "^2.6.12",
     "vuetify": "^2.3.19",

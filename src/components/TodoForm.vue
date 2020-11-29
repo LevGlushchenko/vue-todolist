@@ -1,6 +1,6 @@
 <template>
-  <v-form ref="form" @submit.prevent="submitHandler">
-    <v-text-field v-model="value" :rules="todoRules" label="Add todo" required></v-text-field>
+  <v-form ref="form" @submit.prevent="addTodo">
+    <v-text-field v-model="value" :rules="todoRules" label="Add todo" required @blur="onBlur"></v-text-field>
   </v-form>
 </template>
 
@@ -16,11 +16,17 @@ export default class Form extends Vue {
   private value: string = '';
   private todoRules: Array<any> = [(v: any) => !!v || 'Required field'];
 
-  private submitHandler() {
-    this.$store.commit('ADD_TODO', this.value);
+  private addTodo() {
+    if (this.value) {
+      this.$emit('add-todo', this.value);
+      this.$refs.form.reset();
+    } else {
+      this.$refs.form.validate();
+    }
+  }
+
+  private onBlur() {
     this.$refs.form.reset();
   }
 }
 </script>
-
-<style lang="scss"></style>
