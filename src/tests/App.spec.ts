@@ -34,11 +34,4 @@ describe('App.vue', () => {
   it('Has todos array', () => {
     expect(wrapper.vm.$data.todos).toBeTruthy();
   });
-
-  // it('Create todo', () => {
-  //   wrapper.find('[data-test="todo-form-input"]').setValue('new todo');
-  //   wrapper.find('[data-test="todo-form"]').trigger('submit.prevent');
-
-  //   expect(wrapper.find('[data-test="todo-item"]').text()).toBe('new todo');
-  // });
 });

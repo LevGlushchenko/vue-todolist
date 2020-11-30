@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import Vuetify from 'vuetify';
-import TodoListItem from '@/components/TodoList.vue';
+import TodoListItem from '@/components/TodoListItem.vue';
 
 const vuetify = new Vuetify();
 const wrapper = mount(TodoListItem, {
@@ -18,7 +18,11 @@ describe('TodoListItem.vue', () => {
     expect(wrapper.vm).toBeTruthy();
   });
 
-  it('Has props data', () => {
-    expect(wrapper.find('.v-list-item__title').text()).toBe('asd');
+  it('Render', () => {
+    expect(wrapper.find('[data-test="todo-item"]')).toBeTruthy();
+  });
+
+  it('Props', () => {
+    expect(wrapper.props('title')).toBe('asd');
   });
 });

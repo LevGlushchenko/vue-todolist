@@ -16,4 +16,6 @@ describe('TodoForm.vue', () => {
     expect(wrapper.find('[data-test="todo-form"]')).toBeTruthy();
     expect(wrapper.find('[data-test="todo-form-input"]')).toBeTruthy();
   });
+
+  it('Create todo', () => {});
 });

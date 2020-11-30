@@ -20,7 +20,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import { v4 as uuid } from 'uuid';
-import { Todo } from './types';
+import { Todo } from '@/types';
 import TodoForm from '@/components/TodoForm.vue';
 import TodoList from '@/components/TodoList.vue';
 
