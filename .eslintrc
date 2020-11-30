@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "env": {
+    "browser": true
+  },
+  "extends": ["plugin:vue/essential", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-unused-vars": "warn"
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  }
+}
